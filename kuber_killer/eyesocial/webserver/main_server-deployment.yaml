@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: eyesocial-main-webserver
+    labels:
+        component: nodejs
+        role: eyes-main-web
+spec:
+    replicas: 3
+    template: # for pods.
+        metadata:
+            labels:
+                component: nodejs
+                role: eyes-main-web
+        spec:
+            containers:
+            -   name: main-server
+                securityContext:
+                    privileged: true
+                    capabilities:
+                        add:
+                            -   IPC_LOCK  # 鎖住 heap size , 不滑進 swap.
+                image: gcr.io/jeff-map-projectqq/node_labber:6.9.1
+                workingDir : /webserver
+                # DNS 成功!!!!
+                ports:
+                - containerPort: 32767
+                  name: http
+                  protocol: TCP
+                volumeMounts:
+                - name: "main-webserver"
+                  mountPath: /webserver
+                command: ["node","server"]
+            volumes:
+                - name: "main-webserver"
+                  nfs:
+                      server: "10.146.0.2"
+                      path: "/home/logfm3798/eyesocial_webserver"

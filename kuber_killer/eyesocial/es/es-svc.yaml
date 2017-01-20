@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: elasticsearch
+    annotations:
+      service.beta.kubernetes.io/load-balancer-source-ranges: "10.140.0.0/24,61.216.25.228/32" # 要寫 外部ip = =
+    #namespace: jeff-es-cluster-qq
+    labels:
+        component: elasticsearch
+        role: master
+spec:
+    type: LoadBalancer
+    selector:
+        component: elasticsearch
+        role: master
+    clusterIP: None # 對接 PetSet 時，好似需要這個
+    ports:
+    -   name: http
+        port: 9200
+        protocol: TCP

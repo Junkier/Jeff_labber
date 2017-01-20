@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: eyesocial-analy-webserver
+    labels:
+        component: nodejs
+        role:  eyes-analy-web
+spec:
+    replicas: 3
+    template:
+        metadata:
+            labels:
+                component: nodejs
+                role: eyes-analy-web
+        spec:
+            containers:
+            -   name: analy-server
+                securityContext:
+                    privileged: true
+                    capabilities:
+                        add:
+                            -   IPC_LOCK  # 鎖住 heap size , 不滑進 swap.
+                image: gcr.io/jeff-map-projectqq/node_labber:6.9.1
+                workingDir: /anal_server
+                ports:
+                - containerPort: 32777
+                  name: http
+                  protocol: TCP
+                volumeMounts:
+                - name: "analy-server"
+                  mountPath: /anal_server
+                command: ["node","analysis_server"]
+            volumes:
+                - name: "analy-server"
+                  nfs:
+                      server: "10.146.0.2"
+                      path: "/home/logfm3798/eyes_anal_server"
+                    #   readOnly: true

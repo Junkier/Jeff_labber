@@ -1,0 +1,73 @@
+apiVersion: apps/v1alpha1  # 靠北阿，好像只能 run k8s-alpha版才有這個 API!!!
+# 幹將軍啦，alpha 版還沒穩定 apps/v1alpha1 9/30被 disabled掉啦啦啦啦啦
+# 只好繼續等= = 然後用人工開Volumes嗚嗚嗚嗚 還不能做到 stateful app 快速Deployment= =
+kind: PetSet
+metadata:
+    name: es-master
+    namespace: jeff-es-cluster-qq
+    labels:
+        component: elasticsearch
+        role: master
+spec:
+    serviceName: "elasticsearch"  # 抽象為 domain.name
+    replicas: 3
+    template:
+        metadata:
+            labels:
+                component: elasticsearch
+                role: master
+            annotations:
+                # 創建 PetSet 時，不須暫停check狀態 (false的時候，就是預設要暫停!!!)
+                pod.alpha.kubernetes.io/initialized: "true"
+        spec:
+            terminationGracePeriodSeconds: 0 # 好像是刪除每個 pod，中間會間隔幾秒
+            containers:
+            -   name: es-qq-master
+                securityContext:
+                    privileged: true
+                    capabilities:
+                        add:
+                            -   IPC_LOCK  # 鎖住 heap size , 不滑進 swap.
+                image: gcr.io/jeff-map-projectqq/es_labber:v3_k8s_come_again
+                env:
+                -   name: "NAMESPACE"
+                    valueFrom:        # 用上面寫過的欄位當值!!!
+                        fieldRef:
+                            fieldPath: metadata.namespace
+                -   name: ES_HEAP_SIZE
+                    value: "1g"
+                -   name: "NODE_NAME"
+                    value: "QQ_master"
+                -   name: "CLUSTER_NAME"
+                    value: "Jeff-GoogleCloud K8S Cluster."
+                -   name: "DISCOVERY_SERVICE"
+                    value: "elasticsearch-discovery"
+                ports:
+                - containerPort: 9200
+                  name: http
+                  protocol: TCP
+                - containerPort: 9300
+                  name: transport
+                  protocol: TCP
+                volumeMounts:
+                - name: "pd-storage"
+                  mountPath: /usr/share/elasticsearch/data
+                - name: "ik-good"
+                  mountPath: /usr/share/elasticsearch/plugins/ik
+            volumes:
+            -   name: "ik-good"
+                nfs:
+                    server: "10.146.0.2"
+                    path: "/home/logfm3798/for_es/ik"
+                    readOnly: true
+
+    volumeClaimTemplates:
+    -   metadata:
+            name: "pd-storage"
+            annotations:
+                volume.alpha.kubernetes.io/storage-class: anything
+        spec:   # 唉呦，好像是 PVC 的 spec 喔!!!
+            accessModes: ["ReadWriteOnce"]
+            resources:
+                requests:
+                    storage: 5Gi

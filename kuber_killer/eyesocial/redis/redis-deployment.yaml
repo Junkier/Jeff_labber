@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: redis
+    labels:
+        component: redis
+spec:
+    replicas: 1
+    template: # for pods.
+        metadata:
+            labels:
+                component: redis
+        spec:
+            containers:
+            -   name: redis-server
+                image: docker.io/redis
+                ports:
+                - containerPort: 6379
+                  name: http
+                  protocol: TCP
+                volumeMounts:
+                - name: "session-record"
+                  mountPath: /data
+                command: ["redis-server"]
+                args:
+                - "--appendonly yes"
+                # args: ["--appendonly yes"]
+            volumes:
+                - name: "session-record"
+                  nfs:
+                    server: "10.146.0.2"
+                    path: "/home/logfm3798/r_data"
+                #   emptyDir: {}

@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: eyesocial-analy-webserver-svc
+    annotations:
+        service.beta.kubernetes.io/load-balancer-source-ranges : "10.140.0.0/24"  # 用來限定 service 的 ip-ranges
+    labels:
+        component: nodejs
+        role: eyes-analy-web
+spec:
+    type: LoadBalancer
+    selector:
+        component: nodejs
+        role: eyes-analy-web
+    ports:
+    -   name: http
+        port: 32777
+        targetPort: 32777
+        protocol: TCP

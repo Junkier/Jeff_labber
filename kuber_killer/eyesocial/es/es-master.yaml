@@ -1,0 +1,67 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: es-master-1
+    #namespace: jeff-es-cluster-qq
+    labels:
+        component: elasticsearch
+        role: master
+spec:   # 第一次寫出來嗚嗚嗚
+    replicas: 1
+    template:   # 感覺是 for pods 的.
+        metadata:
+            labels:
+                component: elasticsearch
+                role: master
+                deploy: group1 # 不然會打架= =
+        spec:
+            containers:
+            -   name: es-qq-master
+                securityContext:
+                    privileged: true
+                    capabilities:
+                        add:
+                            -   IPC_LOCK  # 鎖住 heap size , 不滑進 swap.
+                image: gcr.io/jeff-map-projectqq/es_labber:v3_k8s_come_again
+                env:
+                -   name: "NAMESPACE"
+                    valueFrom:        # 用上面寫過的欄位當值!!!
+                        fieldRef:
+                            fieldPath: metadata.namespace
+                -   name: ES_HEAP_SIZE
+                    value: "1.5g"
+                -   name: "NODE_NAME"
+                    value: "QQ_master"
+                -   name: "CLUSTER_NAME"
+                    value: "Jeff-GoogleCloud K8S Cluster."
+                -   name: "DISCOVERY_SERVICE"
+                    value: "elasticsearch-discovery"
+                ports:
+                - containerPort: 9200
+                  name: http
+                  protocol: TCP
+                - containerPort: 9300
+                  name: transport
+                  protocol: TCP
+                volumeMounts:
+                - name: "pd-storage"
+                  mountPath: /usr/share/elasticsearch/data
+                - name: "ik-good"
+                  mountPath: /usr/share/elasticsearch/plugins/ik
+                # args: ["-Des.node.name=$(NODE_NAME) -Des.cluster.name=$(CLUSTER_NAME)"]
+            volumes:
+                - name: "pd-storage"
+                  nfs:
+                      server: "10.146.0.2"
+                      path: "/home/logfm3798/for_es/es_data1"   # nfs dir 要事先弄好 + 希望可以用 指令環境變數 代入
+                      # 下次可嘗試， 如果大家都 mount 一樣的 dir , data會不會蓋來蓋去!!!
+                      # 搞不好真的可以!!
+                      # 刪掉了 嗚嗚嗚 ，下次從這裡開始QQ
+                # 先用 NFS 哩~~~ 之後再用 Gluster
+                #   emptyDir:
+                #     medium: ""
+                - name: "ik-good"
+                  nfs:
+                      server: "10.146.0.2"
+                      path: "/home/logfm3798/for_es/ik"
+                      readOnly: true

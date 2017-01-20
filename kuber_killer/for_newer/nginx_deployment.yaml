@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1    # API 版本
+kind: Deployment                  # k8s 物件 (ex: Pod , Service , Deployment , PV , PVC)
+metadata:                         # 幫這個物件掛個名
+  name: nginx-deployment
+spec:                             # 細節
+  replicas: 2                     # Deployment 裡要幾組 pod 常備
+  template:                       # 其實我不是很懂 template 要幹嘛的，顧名思義是定義模板
+    metadata:                     # Pod 的 metadata
+      labels:                     # 定義 Labels ， Service , PD 的 selector 會用到
+        app: nginx
+    spec:                         # Pod 的 spec
+      containers:                 # Containers 們， 每組 pod 裡可定義多個 Containers
+      - name: nginx-test          # C的名義
+        image: nginx:latest         # image
+        ports:                      # port
+        - containerPort: 80
+        env:                        # 環境變數 (配置時超好用)
+        -   name: ""
+            value: ""
+        volumeMounts:               # 掛載點，需和下面的 掛載定義 裡面的東西 名字一樣!!!
+        - name: ""
+          mountPath: ""
+    volumes:                      # Pod 的 volumes (掛載定義，弄好後可給 Containers 用)
+        - name: "ik-good"                       # 名稱
+          nfs:                                  # Volume Type ， 有許多選擇 (PersistentDisk,NFS,Gluster..)
+              server: ""
+              path: ""
+              readOnly: true

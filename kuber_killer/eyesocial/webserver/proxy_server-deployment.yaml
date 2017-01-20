@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: eyesocial-proxy-server
+    labels:
+        component: nodejs
+        role: eyes-proxy
+spec:
+    replicas: 3
+    template: # for pods.
+        metadata:
+            labels:
+                component: nodejs
+                role: eyes-proxy
+        spec:
+            containers:
+            -   name: proxy-server
+                securityContext:
+                    privileged: true
+                    capabilities:
+                        add:
+                            -   IPC_LOCK  # 鎖住 heap size , 不滑進 swap.
+                image: docker.io/jeffsheng/node_labber:6.9.1
+                workingDir : /webserver
+                # DNS 成功!!!!
+                ports:
+                - containerPort: 32980
+                  name: http
+                  protocol: TCP
+                volumeMounts:
+                - name: "proxy-server"
+                  mountPath: /webserver
+                command: ["node","proxy"]
+            volumes:
+                - name: "proxy-server"
+                  nfs:
+                      server: "10.146.0.2"
+                      path: "/home/logfm3798/eyesocial_proxy_sever"
