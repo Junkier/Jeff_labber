@@ -1,0 +1,32 @@
+version: "2"
+services:
+    elk-es:
+        container_name: elk-es
+        restart: always
+        image: docker.io/elasticsearch:5
+        ports:
+          - "9200:9200"
+          - "9300:9300"
+        #volumes:
+        #  - 之後加 mount 進來 !!!
+    elk-ls:
+        container_name: elk-ls
+        restart: always
+        image: docker.io/logstash:5
+        links:
+          - elk-es:elk-es
+        volumes:
+          - $PWD/logstash:/config-dir
+        command: -f /config-dir/logstash.conf
+    elk-kba:
+        container_name: elk-kba
+        restart: always
+        image: docker.io/kibana:5
+        links:
+          - elk-es:elasticsearch
+        ports:
+          - "5601:5601"
+
+
+
+#  docker logstash 疑似不接受 hostname 有 "_" 的存在!!
