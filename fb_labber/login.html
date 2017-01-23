@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <title>FB 登入功能 Labber</title>
+    <style>
+    textarea{
+        width: 200px;
+        height: 150px;
+    }
+    </style>
+    <!-- <meta name="generator" content="應是愛數據應用" /> -->
+    <!-- <link rel=icon href="soap_entrance/img/favicon.png"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <!-- <script src="/login.js"></script> -->
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script src="/login.js"></script>
+    <!-- <script></script> -->
+    <div>
+        <span>歡迎登入QQQQ</span>
+        <div>
+            <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="true" data-auto-logout-link="true"></div>
+        </div>
+    </div>
+    <div id="status">
+    </div>
+    <div id="jeff_message">
+        <button id="double_check" style="width:150px; height:20px;vertical-align: 10px;">狀態確認</button>
+        <textarea id="show_message" disabled></textarea>
+    </div>
+    <div>
+        <button id="auth_again" style="width:150px; height:20px;vertical-align: 10px;">授權2.0</button>
+        <textarea id="show_message_again" disabled></textarea>
+    </div>
+    <div>
+        <button id="fb_data_get" style="width:150px; height:20px;vertical-align: 10px;">取得用戶 FB 資料</button>
+        <textarea id="show_user_profile" style="width:300px;" disabled></textarea>
+    </div>
+    <!-- <div > -->
+</body>
+
+</html>
