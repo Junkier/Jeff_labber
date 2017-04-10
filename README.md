@@ -11,3 +11,12 @@
     ‧ V 測試 FB login 功能 
     ‧ V 測試 FB 授權功能，User 拒絕後，可不放棄再次要求授權 (auth_type:"rerequest") 
     ‧ V 測試 FB 對接 GraphAPI 功能 (FB.api)
+    
+## GCF_labber:
+  - 測試 Google Cloud Function 用法 & 效能，未來考慮取代 analyzer server. (serverless 化)
+  
+## proxy_labber:
+  - 作為 http proxy 測試
+  
+## mail_labber:
+  - Node.js SMTP server 測試
