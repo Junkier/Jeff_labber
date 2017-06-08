@@ -12,7 +12,7 @@ http.createServer(function (req, res) {
     proxy.web(req, res, { target: _proxy_url });
     proxy.on('error', function(e) {
         console.log(e);
-        res.json({"err":e});
-        res.end();
+        // res.json({"err":e});
+        // res.end();
     });
 }).listen(port_num);
