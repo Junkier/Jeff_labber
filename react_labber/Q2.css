@@ -1,0 +1,40 @@
+.fancytable{
+	border:1px solid #cccccc;
+	width:100%;
+	border-collapse:collapse;
+}
+.fancytable th, .fancytable td{
+	border:1px solid #cccccc;
+	color:#555555;
+	text-align:center;
+	line-height:28px;
+}
+
+.headerrow{
+	background-color:#0066cc;
+}
+.headerrow th{
+	color:#ffffff;
+	text-align:center;
+}
+.datarowodd{
+	background-color:#ffffff;
+}
+.dataroweven{
+	background-color:#efefef;
+}
+.datarowodd td{
+	background-color:#ffffff;
+}
+.dataroweven td{
+	background-color:#efefef;
+}
+
+hr {
+    height: 4px;
+    width: 68%;
+    background-color: #DDD;
+    border-radius: 5px;
+    position: relative;
+    top: 30px;
+}
