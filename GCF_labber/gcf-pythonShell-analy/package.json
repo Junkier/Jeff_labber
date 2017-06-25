@@ -1,0 +1,16 @@
+{
+  "name": "gcf-test-analyzer",
+  "version": "0.0.1",
+  "description": "This is for Google Cloud Function test.",
+  "main": "goAnalyze.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeff Sheng",
+  "license": "MIT",
+  "dependencies": {
+    "python-shell":"^0.4.0",
+    "moment":"*",
+    "object-sizeof":"^1.1.1"
+  }
+}
