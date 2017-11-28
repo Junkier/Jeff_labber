@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv=X-UA-Compatible content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>風向預警｜硬是愛數據應用</title>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="css/default.css" >
+  <link rel="stylesheet" href="css/print.css" >
+  <link rel="stylesheet" type="text/css" href="common/css/favorite_theme.css">
+
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+  <!-- [if It IE 9] -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="common/js/jdict.js"></script>
+  <script src="common/js/jsdk.js"></script>
+  <script src="js/reports.js"></script>
+  <script src="js/numeral.min.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body >
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <span class="navbar-brand" href="">風向預警 : 設定觀測主題，每日輕鬆閱讀社群風向匯報 </span>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="alertSetting" id="alert">
+      <div class="tab-content">
+      <!-- 關鍵字一 -->
+        <div role="tabpanel" class="tab-pane active" id="keyword1">
+          <div id="report">
+            <h1>每日觀測報告預覽</h1>
+            <p class='lead timeRange'></p>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class='reportChart'>
+                <div class="reportChartTitle">監測燈號<span class="reportChartSub">高於平均水準</span></div>
+                <div class="reportChartContent" id="monitorLights1" style="width:100%;height:300px;">
+                    <!-- <img src='img/monitor_lights.png'> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class='reportChart'>
+                <div class="reportChartTitle">文章來源<span class="reportChartSub">網路討論主要頻道</span></div>
+                <div class="reportChartContent" id="hotWebsites1" style="width:100%;height:300px;">
+                    <!-- <img src='img/hot_websites.png'> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class='reportChart'>
+                <div id="originalPoslabel">正面情緒</div>
+                <div id="originalPosText"></div>
+                <div id="originalNeglabel">負面情緒</div>
+                <div id="originalNegText"></div>
+                <div id="originalNeulabel">中立情緒</div>
+                <div id="originalNeuText"></div>
+                <div id="responsePoslabel">正面情緒</div>
+                <div id="responsePosText"></div>
+                <div id="responseNeglabel">負面情緒</div>
+                <div id="responseNegText"></div>
+                <div id="responseNeulabel">中立情緒</div>
+                <div id="responseNeuText"></div>
+                <div class="reportChartTitle">正負感受<span class="reportChartSub">分析文章內容表達出的情緒感受</span></div>
+                <div class="reportChartContent" id="semantics1" style="width:100%;height:300px;">
+                    <!-- <img src='img/semantics.png'> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class='reportChart'>
+                <div class="reportChartTitle">熱門關鍵詞<span class="reportChartSub">討論度與關聯度最高的話題</span></div>
+                <div class="reportChartContent" id="hotRelativeWord1" style="width:100%;height:300px;">
+                    <!-- <img src='img/hot_relative_words.png'> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class='reportChart'>
+                <div class="reportChartTitle">聲量變化 總聲量<span class="reportChartSub">追蹤觀測期間總聲量趨勢</span></div>
+                <div class="reportChartContent" id="volumeTrendAll1" style="width:100%;height:300px;">
+                    <!-- <img src='img/volume_trends_all.png'> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class='reportChart'>
+                <div class="reportChartTitle">情緒變化 P/N<span class="reportChartSub">追蹤觀測期間正/負情緒波動</span></div>
+                <div class="reportChartContent" id="volumeTrendPN1" style="width:100%;height:300px;">
+                    <!-- <img src='img/volume_trends_PN.png'> -->
+                </div>
+              </div>
+            </div>
+            <div class="reportContent articleTable">
+              <ul class="nav nav-tabs nav-justified tableTab">
+                <li role="presentation" id="volSort1" class="tableSort active"><a href="#">人氣排名</a></li>
+              </ul>
+              <div class="tab-content tableSortContent">
+                <div role="tabpanel" class="tab-pane active" id="volSortTab1">
+                  <div class="">
+                    <table class="table table-bordered table-striped table-hover"></table>
+                  </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.3.2/echarts.min.js"></script>
+</body>
+</html>

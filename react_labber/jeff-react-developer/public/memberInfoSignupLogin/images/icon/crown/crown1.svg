@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="40px" viewBox="0 0 46 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 49 Copy 10</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.309714286 0.535428571 5.16914286 0.535428571 5.16914286 5.39468571 0.309714286 5.39468571 0.309714286 0.535428571"></polygon>
+        <polygon id="path-3" points="0 39.4285714 45.4662857 39.4285714 45.4662857 0.535428571 0 0.535428571"></polygon>
+    </defs>
+    <g id="live" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-49-Copy-10">
+            <g id="Page-1">
+                <polygon id="Fill-1" fill="#E9BA3E" points="36.4864 33.8822286 9.02354286 33.8822286 3.34468571 11.1450857 14.8286857 20.2879429 22.7389714 5.4308 30.4058286 20.2879429 42.0806857 11.1450857"></polygon>
+                <g id="Group-11" transform="translate(0.000000, 0.036114)">
+                    <g id="Group-4" transform="translate(20.000000, 0.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-3"></g>
+                        <path d="M5.16914286,2.96497143 C5.16914286,4.30668571 4.08114286,5.39468571 2.73942857,5.39468571 C1.39771429,5.39468571 0.309714286,4.30668571 0.309714286,2.96497143 C0.309714286,1.62325714 1.39771429,0.535257143 2.73942857,0.535257143 C4.08114286,0.535257143 5.16914286,1.62325714 5.16914286,2.96497143" id="Fill-2" fill="#E89937" mask="url(#mask-2)"></path>
+                    </g>
+                    <path d="M45.4662857,8.84388571 C45.4662857,10.1856 44.3782857,11.2736 43.0365714,11.2736 C41.6948571,11.2736 40.6068571,10.1856 40.6068571,8.84388571 C40.6068571,7.5016 41.6948571,6.41417143 43.0365714,6.41417143 C44.3782857,6.41417143 45.4662857,7.5016 45.4662857,8.84388571" id="Fill-5" fill="#E89937"></path>
+                    <path d="M4.85942857,8.84388571 C4.85942857,10.1856 3.77142857,11.2736 2.42971429,11.2736 C1.088,11.2736 0,10.1856 0,8.84388571 C0,7.5016 1.088,6.41417143 2.42971429,6.41417143 C3.77142857,6.41417143 4.85942857,7.5016 4.85942857,8.84388571" id="Fill-7" fill="#E89937"></path>
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="Clip-10"></g>
+                    <polygon id="Fill-9" fill="#E89937" mask="url(#mask-4)" points="9.02342857 39.4285714 36.4354286 39.4285714 36.4354286 33.8462857 9.02342857 33.8462857"></polygon>
+                </g>
+            </g>
+            <text id="1" font-family="PingFangTC-Regular, PingFang TC" font-size="16" font-weight="normal" letter-spacing="0.191999987" fill="#FFFFFF">
+                <tspan x="19.196" y="32">1</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

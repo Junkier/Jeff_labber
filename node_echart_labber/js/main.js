@@ -1,0 +1,268 @@
+_CHART = new chartShower();
+MAPPING_DICT = new getUsageDict();
+KEYNOTE = 1;
+
+var data = {
+    "monitor_lights": {
+        "vol_time_statistics": {
+            "all_volume": {
+                "avg": 155.8683333333333,
+                "std_deviation": 275.07850893982175,
+                "sample": 137
+            },
+            "pos": {
+                "avg": 0.9354838709677419,
+                "std_deviation": 2.1542977880082583,
+                "sample": 1
+            },
+            "neg": {
+                "avg": 1.4838709677419355,
+                "std_deviation": 1.6238339288584798,
+                "sample": 1
+            }
+        }
+    },
+    "hot_websites": {
+        "by_fields": [{
+            "rank": 1,
+            "field": "forum",
+            "doc_cnt": 22
+        }, {
+            "rank": 2,
+            "field": "social_media",
+            "doc_cnt": 15
+        }],
+        "by_catogories": [{
+            "rank": 1,
+            "field": "forum",
+            "website": "ptt",
+            "category": "Gossiping",
+            "doc_cnt": 1,
+            "post_vol_sum": 17.85
+        }, {
+            "rank": 2,
+            "field": "social_media",
+            "website": "facebook",
+            "category": "蘋果日報",
+            "doc_cnt": 1,
+            "post_vol_sum": 11.850000000000001
+        },{
+            "rank": 3,
+            "field": "forum",
+            "website": "dcard",
+            "category": "旅遊",
+            "doc_cnt": 1,
+            "post_vol_sum": 10.45
+        }]
+    },
+    "semantics": {
+        "by_resp_semantic": {
+            "pos": 75,
+            "neu": 98,
+            "neg": 30
+        },
+        "by_post_semantic": {
+            "pos": 15,
+            "neg": 7,
+            "neu": 17,
+            "PN_ratio": 5.2
+        }
+    },
+    "hot_relative_words": {
+        "FPtree": [
+            {"Level1": "數據", "Level2": "", "word": "柯文哲", "weight": 0.12165669788962871},
+            {"Level1": "市府", "Level2": "", "word": "柯文哲", "weight": 0.11691682654327953},
+            {"Level1": "答嘴鼓", "Level2": "", "word": "柯文哲", "weight": 0.10766279200993116},
+            {"Level1": "指教", "Level2": "", "word": "柯文哲", "weight": 0.10314862882293195},
+            {"Level1": "賴香伶", "Level2": "", "word": "柯文哲", "weight": 0.08881616070420946},
+            {"Level1": "謝長廷", "Level2": "", "word": "柯文哲", "weight": 0.08847759846518452},
+            {"Level1": "財政局", "Level2": "", "word": "柯文哲", "weight": 0.08667193319038483},
+            {"Level1": "總預算", "Level2": "", "word": "柯文哲", "weight": 0.08622051687168492},
+            {"Level1": "北市府", "Level2": "", "word": "柯文哲", "weight": 0.08588195463265998},
+            {"Level1": "修法", "Level2": "", "word": "柯文哲", "weight": 0.08576910055298499}
+        ]
+    },
+    "volume_trends_all": {
+        "by_days": {
+            "2017-11-04": {
+                "doc_cnt": 1,
+                "post_vol_sum": 11.85
+            },
+            "2017-11-05": {
+                "doc_cnt": 4,
+                "post_vol_sum": 37.424
+            },
+            "2017-11-06": {
+                "doc_cnt": 2,
+                "post_vol_sum": 39.55
+            },
+            "2017-11-07": {
+                "doc_cnt": 7,
+                "post_vol_sum": 66.44
+            }
+        }
+    },
+    "volume_trends_PN": {
+        "by_days": {
+            "2017-11-04": {
+                "doc_cnt": 1,
+                "by_post_semantic": {
+                    "PN_ratio": 1.22
+                }
+            },
+            "2017-11-05": {
+                "doc_cnt": 0,
+                "by_post_semantic": {
+                    "PN_ratio": 2.1
+                }
+            },
+            "2017-11-06": {
+                "doc_cnt": 0,
+                "by_post_semantic": {
+                    "PN_ratio": 0.75
+                }
+            },
+            "2017-11-07": {
+                "doc_cnt": 1,
+                "by_post_semantic": {
+                    "PN_ratio": 0.94
+                }
+            }
+        }
+    },
+    "articles": [
+        {
+            "field": "news",
+            "website": "ettoday",
+            "title": "「兒完成我心願」20歲警報到7天被輾斃　姐：我們下輩子再續緣分",
+            "url": "https://www.ettoday.net/news/20171101/1042894.htm",
+            "time": "2017-11-01 08:19:00",
+            "volume": 683.75,
+            "content_semantic_tag": "neg",
+            "content_semantic_grade": 1,
+            "author": "ettoday",
+            "category": "社會",
+            "content_semantic_score": -0.13168724279835392
+        },
+        {
+            "field": "forum",
+            "website": "dcard",
+            "title": "我們的15年 續續續",
+            "url": "https://www.dcard.tw/f/relationship/p/227607511",
+            "time": "2017-11-02 02:35:13",
+            "volume": 241.95000000000002,
+            "content_semantic_tag": "pos",
+            "content_semantic_grade": 5,
+            "author": "匿名",
+            "category": "感情",
+            "content_semantic_score": 2.031552795031056
+        },
+        {
+            "field": "news",
+            "website": "setn",
+            "title": "眼淚止不住！她PO文憶姊弟感情好：下輩子。緣分。再續",
+            "url": "http://www.setn.com/News.aspx?NewsID=310359",
+            "time": "2017-11-01 11:51:00",
+            "volume": 140.1,
+            "content_semantic_tag": "neu",
+            "content_semantic_grade": 0,
+            "author": "setn",
+            "category": "社會",
+            "content_semantic_score": -0.03902439024390244
+        },
+        {
+            "field": "forum",
+            "website": "dcard",
+            "title": "#情報 第54屆金馬獎入圍名單懶人包",
+            "url": "https://www.dcard.tw/f/movie/p/227642065",
+            "time": "2017-11-06 16:59:10",
+            "volume": 18.25,
+            "content_semantic_tag": "pos",
+            "content_semantic_grade": 4,
+            "author": "✨五公分H子✨",
+            "category": "影劇",
+            "content_semantic_score": 0.9594095940959411
+        },
+        {
+            "field": "forum",
+            "website": "dcard",
+            "title": "#台灣 #環島 #火車 #打工換宿 Day1",
+            "url": "https://www.dcard.tw/f/travel/p/227644504",
+            "time": "2017-11-06 22:58:15",
+            "volume": 10.75,
+            "content_semantic_tag": "pos",
+            "content_semantic_grade": 2,
+            "author": "國立暨南國際大學 教育政策與行政學系",
+            "category": "旅遊",
+            "content_semantic_score": 0.3132530120481928
+        },
+        {
+            "field": "forum",
+            "website": "dcard",
+            "title": "你不知道的喜歡，或是愛。",
+            "url": "https://www.dcard.tw/f/relationship/p/227618967",
+            "time": "2017-11-03 16:15:37",
+            "volume": 2.15,
+            "content_semantic_tag": "neg",
+            "content_semantic_grade": 3,
+            "author": "馬偕醫護管理專科學校",
+            "category": "感情",
+            "content_semantic_score": -0.5489539748953975
+        },
+        {
+            "field": "blog",
+            "website": "pixnet",
+            "title": "2017-11-02 歌單",
+            "url": "http://bestradio.pixnet.net/blog/post/66183873",
+            "time": "2017-11-03 09:06:00",
+            "volume": 0.05,
+            "content_semantic_tag": "pos",
+            "content_semantic_grade": 2,
+            "author": "好事聯播網 好事989",
+            "category": "視聽娛樂",
+            "content_semantic_score": 0.46542605288932415
+        },
+        {
+            "field": "blog",
+            "website": "pixnet",
+            "title": "2017-10-30 歌單",
+            "url": "http://bestradio.pixnet.net/blog/post/66172437",
+            "time": "2017-10-31 09:17:00",
+            "volume": 0,
+            "content_semantic_tag": "pos",
+            "content_semantic_grade": 1,
+            "author": "好事聯播網 好事989",
+            "category": "視聽娛樂",
+            "content_semantic_score": 0.1344922232387923
+        },
+        {
+            "field": "forum",
+            "website": "ptt",
+            "title": "[買賣] 陳奕迅演唱會門票釋出轉讓",
+            "url": "https://www.ptt.cc/bbs/SongShan/M.1509749975.A.5CA.html",
+            "time": "2017-11-04 06:59:32",
+            "volume": 0,
+            "content_semantic_tag": "neu",
+            "content_semantic_grade": 0,
+            "author": "ZWVIO",
+            "category": "SongShan",
+            "content_semantic_score": 0
+        }
+    ]
+};
+
+$(function(){
+
+
+    ["monitorLights","hotWebsites","semantics","hotRelativeWord","volumeTrendAll","volumeTrendPN"].map(function(key){
+        var chartId = key + KEYNOTE;
+        var chart = echarts.init(document.getElementById(chartId));
+    });
+    Object.keys(_CHART).map(function(key){
+        _CHART[key](data[key]);
+    });
+    // $("#volumeTrendAll1").html($("html").height());
+    // $("#volumeTrendPN1").html($("html").width());
+    genTableHead();
+    createTable(data.articles,"vol");
+});

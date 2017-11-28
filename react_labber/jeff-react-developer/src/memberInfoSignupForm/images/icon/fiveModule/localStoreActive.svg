@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 103</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FBD249" offset="0%"></stop>
+            <stop stop-color="#EA8D05" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="live" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-103" transform="translate(-5.000000, -5.000000)">
+            <g id="Page-1-Copy-12" transform="translate(5.000000, 5.000000)" fill="url(#linearGradient-1)">
+                <path d="M3.43912329,5.0000274 C3.43912329,5.0000274 4.97364384,2.73972603e-05 9.80679452,2.73972603e-05 C14.6402192,2.73972603e-05 16.0846027,5.0000274 16.0846027,5.0000274 L13.5977534,5.0000274 C13.5977534,5.0000274 12.2750137,2.34920701 9.86761644,2.34920701 C7.46021918,2.34920701 6.24323288,5.0000274 6.24323288,5.0000274 L3.43912329,5.0000274 Z" id="Fill-1"></path>
+                <path d="M8.71506849,13.1476164 L10.9024658,13.1476164 L10.9024658,10.9602192 L8.71506849,10.9602192 L8.71506849,13.1476164 Z M17.4071233,5.39665753 L2.11643836,5.39665753 L0,19.7881644 L19.7353425,19.7881644 L17.4071233,5.39665753 Z" id="Fill-3"></path>
+            </g>
+            <rect id="Rectangle-17-Copy-6" x="0" y="0" width="30" height="30"></rect>
+        </g>
+    </g>
+</svg>

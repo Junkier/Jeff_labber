@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Lo叩-登入成功 </title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- JQuary Core Module -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Moment js Module -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script src="/login/js/logout-app.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="testLogin">
+                <div class="fb-login-button" onlogin="checkUserStatus()" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
+            </div>
+            <div id="jeff_message" style="padding:10px;">
+                <button class="btn btn-info" id="double_check" >成功!!!!!!!!!!!</button>
+                <textarea id="show_message" disabled>平安喜樂:)</textarea>
+                <!-- <a href='logout'><button class="btn btn-danger" id="double_check" >點我快樂登出。</button></a> -->
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+</body>
+
+</html>

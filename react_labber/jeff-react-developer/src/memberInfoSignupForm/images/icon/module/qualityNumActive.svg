@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="13px" viewBox="0 0 26 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 58</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FBD249" offset="0%"></stop>
+            <stop stop-color="#EA8D05" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="live" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-58" transform="translate(-2.000000, -8.000000)">
+            <rect id="Rectangle-24-Copy-3" x="0" y="0" width="30" height="30"></rect>
+            <path d="M15,8 C8.09666667,8 2.5,13.5966667 2.5,20.5 L8.75,20.5 C8.75,17.0483333 11.5483333,14.25 15,14.25 C18.4516667,14.25 21.25,17.0483333 21.25,20.5 L27.5,20.5 C27.5,13.5966667 21.9033333,8 15,8" id="Fill-1" fill="url(#linearGradient-1)"></path>
+        </g>
+    </g>
+</svg>

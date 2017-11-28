@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="22px" viewBox="0 0 56 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>conflict2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-5.0%" y="-2.5%" width="110.0%" height="110.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0.5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.25" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FCC800" offset="0%"></stop>
+            <stop stop-color="#F58306" offset="34.5026457%"></stop>
+            <stop stop-color="#F26808" offset="48.11497%"></stop>
+            <stop stop-color="#F26808" offset="48.11497%"></stop>
+            <stop stop-color="#F26808" offset="48.11497%"></stop>
+            <stop stop-color="#ED3E0C" offset="69.074532%"></stop>
+            <stop stop-color="#ED3E0C" offset="69.074532%"></stop>
+            <stop stop-color="#ED3E0C" offset="69.074532%"></stop>
+            <stop stop-color="#ED3E0C" offset="69.074532%"></stop>
+            <stop stop-color="#E60012" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FCC800" offset="0%"></stop>
+            <stop stop-color="#E60012" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="conflict2" transform="translate(1.000000, 0.000000)" fill-rule="nonzero">
+            <g id="Group-3-Copy" filter="url(#filter-1)">
+                <g id="sad-copy-10">
+                    <path d="M10,20 L3,20 C1.3,20 0,18.7 0,17 L0,3 C0,1.3 1.3,0 3,0 L10,0 L10,20 Z" id="Shape" fill="#F7B850"></path>
+                    <path d="M3.5,4.6 L7.4,7.6 C6.7,5.5 3.5,4.6 3.5,4.6 Z" id="Shape" stroke="#323333" stroke-width="0.1" fill="#333333"></path>
+                    <ellipse id="Oval" stroke="#323333" stroke-width="0.1" fill="#333333" cx="5.4" cy="9" rx="1.1" ry="1.6"></ellipse>
+                    <path d="M10,12.5 C8.8,12.5 6.2,12.9 6,15.2 C6,15.3 6.1,15.4 6.2,15.4 C6.8,15.2 9.38459634,15 10,15 C10.0080173,13.7258514 10.0066857,13.7675748 10,12.5 Z" id="Shape" stroke="#323333" stroke-width="0.1" fill="#333333"></path>
+                </g>
+                <g id="sad-copy-11" transform="translate(10.000000, 0.000000)">
+                    <path d="M7,20 L-8.17124146e-14,20 C-2.48689958e-14,17.7272903 -4.20913304e-14,2.31230914 -8.17124146e-14,0 L7,0 C8.7,0 10,1.3 10,3 L10,17 C10,18.7 8.7,20 7,20 Z" id="Shape" fill="#ED4956"></path>
+                    <path d="M2.6,7.6 L6.5,4.6 C6.5,4.6 3.3,5.5 2.6,7.6 Z" id="Shape" stroke="#323333" stroke-width="0.1" fill="#333333"></path>
+                    <ellipse id="Oval" stroke="#323333" stroke-width="0.1" fill="#333333" cx="4.6" cy="9" rx="1.1" ry="1.6"></ellipse>
+                    <path d="M-1.2057022e-13,12.5 C-1.13686838e-13,13.28191 5.94385652e-14,14.0871665 -1.2057022e-13,15 C1.4,15 3.2,15.3 3.8,15.4 C3.9,15.4 4,15.3 4,15.2 C3.8,12.9 1.2,12.5 -1.2057022e-13,12.5 Z" id="Shape" stroke="#323333" stroke-width="0.1" fill="#333333"></path>
+                </g>
+            </g>
+            <g id="neg2-copy-2" transform="translate(25.000000, 0.000000)">
+                <g id="Group" transform="translate(25.000000, 0.000000)">
+                    <rect id="Rectangle-path" fill="#FFFFFF" x="0.1" y="0.1" width="4.8" height="19.8"></rect>
+                    <path d="M4.8,0.2 L4.8,19.8 L0.2,19.8 L0.2,0.2 L4.8,0.2 L4.8,0.2 Z M5,0 L0,0 L0,20 L5,20 L5,0 L5,0 Z" id="Shape" fill="#595757"></path>
+                </g>
+                <g id="Group" transform="translate(18.000000, 4.000000)">
+                    <rect id="Rectangle-path" fill="#FFFFFF" x="0.8" y="0.1" width="4.8" height="15.8"></rect>
+                    <path d="M5.5,0.2 L5.5,15.8 L1,15.8 L1,0.2 L5.5,0.2 L5.5,0.2 Z M5.8,0 L0.8,0 L0.8,16 L5.8,16 L5.8,0 L5.8,0 Z" id="Shape" fill="#595757"></path>
+                </g>
+                <g id="Group" transform="translate(12.000000, 8.000000)">
+                    <rect id="Rectangle-path" fill="#FFFFFF" x="0.6" y="0.1" width="4.8" height="11.8"></rect>
+                    <path d="M5.3,0.2 L5.3,11.8 L0.7,11.8 L0.7,0.2 L5.3,0.2 L5.3,0.2 Z M5.5,0 L0.5,0 L0.5,12 L5.5,12 L5.5,0 L5.5,0 Z" id="Shape" fill="#595757"></path>
+                </g>
+                <rect id="Rectangle-path" fill="url(#linearGradient-2)" x="6.2" y="12" width="5" height="8"></rect>
+                <rect id="Rectangle-path" fill="url(#linearGradient-3)" x="0" y="16" width="5" height="4"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

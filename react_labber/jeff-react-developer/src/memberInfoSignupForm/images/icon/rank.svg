@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="16px" viewBox="0 0 25 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 68</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="live" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-68" transform="translate(-3.000000, -7.000000)">
+            <rect id="Rectangle-21" x="0" y="0" width="30" height="30"></rect>
+            <g id="Group-20-Copy-2" transform="translate(3.000000, 7.000000)">
+                <g id="Group-16">
+                    <path d="M4.8828125e-05,15.5406006 L24.4141113,15.5406006 L24.4141113,7.70002441 C24.4141113,7.02570801 23.8674805,6.47932129 23.1934082,6.47932129 L16.6279785,6.47932129 L16.6279785,1.22077637 C16.6279785,0.546459961 16.0815918,7.32421875e-05 15.4072754,7.32421875e-05 L9.07963867,7.32421875e-05 C8.40556641,7.32421875e-05 7.85893555,0.546459961 7.85893555,1.22077637 L7.85893555,4.43317871 L1.22075195,4.43317871 C0.546435547,4.43317871 4.8828125e-05,4.97956543 4.8828125e-05,5.65388184 L4.8828125e-05,15.5406006 Z" id="Fill-1" fill="#4A4A4A"></path>
+                    <text id="1" font-family="PingFangTC-Medium, PingFang TC" font-size="4" font-weight="400" letter-spacing="0.0480000004" fill="#FFFFFF">
+                        <tspan x="10.9375" y="4">1</tspan>
+                    </text>
+                    <text id="2" font-family="PingFangTC-Medium, PingFang TC" font-size="4" font-weight="400" letter-spacing="0.0480000004" fill="#FFFFFF">
+                        <tspan x="2.34375" y="8.6875">2</tspan>
+                    </text>
+                    <text id="3" font-family="PingFangTC-Medium, PingFang TC" font-size="4" font-weight="400" letter-spacing="0.0480000004" fill="#FFFFFF">
+                        <tspan x="17.96875" y="11.03125">3</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

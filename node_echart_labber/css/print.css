@@ -1,0 +1,21 @@
+/*設計給 print-to-pdf.css 用!!!*/
+/*從這裡開始QQ*/
+
+@media print {
+
+    #report h1 {
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        width: 70%;
+        left: 15%;
+        transform: translateX(-50%);
+        position: relative;
+        margin-bottom: 5px;
+    }
+
+    .td-semantic img{
+        height: 30px;
+    }
+}

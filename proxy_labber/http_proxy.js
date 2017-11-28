@@ -1,10 +1,13 @@
 const http = require("http");
 const httpProxy = require("http-proxy");
+// const fs = require("fs");
 
 const port_num = 33333;
 
 var proxy = httpProxy.createProxyServer();
 var _proxy_url = "http://192.168.0.46:32767";
+
+
 
 console.log(`[localhost:${port_num}] Proxy eyeSocial to Gptt: ${_proxy_url}`);
 

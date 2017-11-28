@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv=X-UA-Compatible content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>lo叩 | </title>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"> -->
+  <!-- 上線版 -->
+  <!-- <link rel="stylesheet" href="/css/default.css" media="screen"> -->
+  <!-- <link rel="stylesheet" href="/css/custom.css" media="screen"> -->
+  <!-- 開發版 -->
+  <link rel="stylesheet" href="css/default.css" media="screen">
+  <link rel="stylesheet" href="css/custom.css" media="screen">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/css/bootstrap2/bootstrap-switch.min.css" media="screen">
+  <script src="https://use.fontawesome.com/13508fc600.js"></script>
+  <!-- JQuary Core Module -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/js/bootstrap-switch.min.js"></script>
+  <!-- 上線版 -->
+  <!-- <script src="/js/jquery.ui.touch-punch.js"></script> -->
+  <!-- 開發版 -->
+  <script src="js/jquery.ui.touch-punch.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-2 col-md-12 col-lg-12" id="memberInfoSignupLogin">
+        <!-- memberInfoGeneralSignUpLogin start -->
+        <div id="memberInfoSignupLoginContent">
+          <div id="myTabHeader">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="signUpTab" data-toggle="tab" href="#signUp" role="tab" aria-controls="signUp" aria-expanded="true">註冊</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="loginTab" data-toggle="tab" href="#login" role="tab" aria-controls="login">登入</a>
+              </li>
+            </ul>
+            <span class="myTabHeaderClose"><i class="fa fa-times fa-2x" aria-hidden="true"></i></span>
+          </div>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="signUp" role="tabpanel" aria-labelledby="signUpTab">
+              <div class="signUpTitle">註冊身份：</div>
+              <div class="signUpRadio">
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked> 一般
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"> 商家
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3"> 組織
+                  </label>
+                </div>
+              </div>
+              <div class="signUpTextTitle">
+                <div class="signUpTextSeparator"></div>
+                <div class="signUpText">快速註冊</div>
+                <div class="signUpTextSeparator"></div>
+              </div>
+              <div class="signUpBtn">
+                <button type="button" class="btn btn-facebook btn-lg btn-block">FACEBOOK</button>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="login" role="tabpanel" aria-labelledby="loginTab">
+              <div class="loginTitle">註冊身份：</div>
+              <div class="loginRadio">
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked> 一般
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"> 商家
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3"> 組織
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4"> 里長
+                  </label>
+                </div>
+              </div>
+              <div class="forUsers">
+                <div class="loginTextTitle">
+                  <div class="loginTextSeparator"></div>
+                  <div class="loginText">快速登入</div>
+                  <div class="loginTextSeparator"></div>
+                </div>
+                <div class="loginBtn">
+                  <button type="button" class="btn btn-facebook btn-lg btn-block">FACEBOOK</button>
+                </div>
+              </div>
+              <div class="forChiefOfVillage">
+                <div class="loginTextTitle">
+                  <div class="loginTextSeparator"></div>
+                  <div class="loginText">里長登入</div>
+                  <div class="loginTextSeparator"></div>
+                </div>
+                <div class="forChiefOfVillageLogin">
+                  <div class="forChiefOfVillageEmail">
+                    <input type="text" class="form-control" placeholder="里長ID">
+                  </div>
+                  <div class="forChiefOfVillagePassword">
+                    <input type="password" class="form-control" placeholder="密碼">
+                  </div>
+                  <div class="loginBtn">
+                    <button type="button" class="btn btn-success btn-lg btn-block">登入</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- memberInfoGeneralSignUpLogin end -->
+        <!-- messagePublishControl start -->
+        <ul id="memberInfoSignupLoginControl">
+          <li class="memberInfoSignupLoginControlList">
+            <div class="messagePublishControlImg"><img src="images/icon/fiveModule/qualityLife.svg" alt=""></div>
+            <span class="messagePublishControlSubTitle">生活品質</span>
+          </li>
+          <li class="memberInfoSignupLoginControlList">
+            <div class="messagePublishControlImg"><img src="images/icon/fiveModule/activityJoin.svg" alt=""></div>
+            <span class="messagePublishControlSubTitle">鄰近活動</span>
+          </li>
+          <li class="memberInfoSignupLoginControlList">
+            <div class="messagePublishControlImg"><img src="images/icon/fiveModule/messagePublish.svg" alt=""></div>
+            <span class="messagePublishControlSubTitle">訊息通知</span>
+          </li>
+          <li class="memberInfoSignupLoginControlList">
+            <div class="messagePublishControlImg"><img src="images/icon/fiveModule/localStore.svg" alt=""></div>
+            <span class="messagePublishControlSubTitle">在地商家</span>
+          </li>
+          <li class="memberInfoSignupLoginControlList">
+            <div class="messagePublishControlImg"><img src="images/icon/fiveModule/memberInfoActive.svg" alt=""></div>
+            <span class="messagePublishControlSubTitle messagePublishControlSubTitleActive">我的設定</span>
+          </li>
+        </ul>
+        <!-- messagePublishControl end -->
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+  <!-- 上線版 -->
+  <!--   <script src="/js/plugins/scroll-scope.min.js"></script>
+  <script src="/js/plugins/readmore.min.js"></script>
+  <script src="/js/height.js"></script>
+  <script src="/js/app.js"></script> -->
+  <!-- 開發版 -->
+  <script src="js/plugins/scroll-scope.min.js"></script>
+  <script src="js/plugins/readmore.min.js"></script>
+  <script src="js/height.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+  // scrollScope
+  $(document).scrollScope();
+  // dropdown
+  $('.dropdown-toggle').dropdown();
+  $('.carousel').carousel({
+    interval: 0
+  });
+  //switchbtn
+  $('.switchbtn').click(function() {
+    $(this).toggleClass("switchon");
+    $('.subscriptionContentSetting').toggle();
+  });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="20px" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 104</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FBD249" offset="0%"></stop>
+            <stop stop-color="#EA8D05" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="live" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-104" transform="translate(-6.000000, -5.000000)">
+            <path d="M15.2,5 C18.003314,5 20.2758621,7.07636715 20.2758621,9.63768116 C20.2758621,12.1989952 18.003314,14.2753623 15.2,14.2753623 C12.396686,14.2753623 10.1241379,12.1989952 10.1241379,9.63768116 C10.1241379,7.07636715 12.396686,5 15.2,5 Z M15.2,16.5942029 C20.2810225,16.5942029 24.4,20.3576039 24.4,25 L6,25 C6,20.3576039 10.1189775,16.5942029 15.2,16.5942029 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+            <rect id="Rectangle-17-Copy-9" x="0" y="0" width="30" height="30"></rect>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,132 @@
+@charset "UTF-8";
+button#mtf-button {
+  background-color: #dc6180;
+  border-color: #dc6180;
+  margin-left: 2%;
+  border-radius: 5px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+button#mtf-button:hover {
+  background-color: #d23d62;
+  /*background-color: #8BC34A;*/
+  border-color: #d23d62;
+}
+
+#mft-table {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  text-align: center;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+#mft-table table {
+  margin-bottom: 0px;
+  height: calc(100% - 38px);
+  /* background-color: #fff; */
+}
+
+#mft-table tbody {
+  /* background-color: #fff; */
+  color: #5d5d5d;
+  cursor: pointer;
+}
+
+span.mft-close {
+  position: absolute;
+  border-right: 0px solid #fff;
+  right: 0px;
+  top: 0px;
+  padding: 6px;
+  cursor: pointer;
+  z-index: 321;
+}
+
+#mft-table thead tr {
+  background-color: #dc6180;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #fff;
+}
+
+#mft-table thead tr th {
+  border-bottom: 1px solid #fff;
+}
+
+#mft-table thead tr th.mft-index {
+  width: 5%;
+  text-align: center;
+}
+
+#mft-table thead tr th.mft-theme {
+  width: 25%;
+  text-align: left;
+}
+
+#mft-table thead tr th.mft-keywords {
+  width: 35%;
+  text-align: left;
+}
+
+#mft-table thead tr th.mft-notwords {
+  width: 35%;
+  text-align: left;
+}
+
+.table-striped>tbody>tr{
+	background-color: rgba(255, 255, 255, 0.95)!important;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: rgba(249, 249, 249, 0.95)!important;
+}
+
+#mft-table tbody tr:hover {
+  background-color: rgba(220, 97, 128, 0.95)!important;
+  border-radius: 10px;
+  color: #fff;
+}
+
+#mft-table tr td {
+  border-bottom: 0px;
+  /* border-top: 1px solid #fff; */
+      line-height: 31px;
+      text-align: center;
+}
+
+#mft-table tbody tr td.mft-index {
+  width: 5%;
+  text-align: left;
+}
+
+#mft-table tbody tr td.mft-theme {
+  width: 25%;
+  text-align: left;
+}
+
+#mft-table tbody tr td.mft-keywords {
+  width: 35%;
+  text-align: left;
+}
+
+#mft-table tbody tr td.mft-notwords {
+  width: 35%;
+  text-align: left;
+}
+
+td.zmft-index div.indexNumber {
+  color: #fff;
+  font-weight: 400;
+}
+
+td.zmft-index div.indexNumber #indexHeart {
+  color: #ff76af;
+}
+
+

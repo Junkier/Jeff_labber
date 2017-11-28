@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="24px" viewBox="0 0 56 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>neg3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="3.766%" y1="3.766%" x2="94.7915%" y2="94.7915%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#E60012" offset="100%"></stop>
+        </linearGradient>
+        <path d="M17,20 L3,20 C1.3,20 0,18.7 0,17 L0,3 C0,1.3 1.3,0 3,0 L17,0 C18.7,0 20,1.3 20,3 L20,17 C20,18.7 18.7,20 17,20 Z" id="path-2"></path>
+        <filter x="-5.2%" y="-2.8%" width="110.5%" height="110.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="0.05" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0.5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.25" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-4" points="54 0 54 20 49 20 49 0"></polygon>
+        <polygon id="path-5" points="43 4 43 20 48 20 48 4"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="neg3" transform="translate(2.000000, 1.000000)">
+            <g id="Group-4">
+                <g id="Combined-Shape" fill-rule="nonzero">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use stroke="#9B9B9B" stroke-width="0.1" fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+                <path d="M10,12.5 C8.8,12.5 6.2,12.9 6,15.2 C6,15.3 6.1,15.4 6.2,15.4 C6.8,15.2 8.6,15 10,15 C11.4,15 13.2,15.3 13.8,15.4 C13.9,15.4 14,15.3 14,15.2 C13.8,12.9 11.2,12.5 10,12.5 Z" id="Shape" fill="#000000"></path>
+                <path d="M3.5,4.6 L7.4,7.6 C6.7,5.5 3.5,4.6 3.5,4.6 Z" id="Shape" stroke="#323333" stroke-width="0.1" fill="#333333" fill-rule="nonzero"></path>
+                <ellipse id="Oval" stroke="#323333" stroke-width="0.1" fill="#333333" fill-rule="nonzero" cx="5.4" cy="9" rx="1.1" ry="1.6"></ellipse>
+                <path d="M12.6,7.6 L16.5,4.6 C16.5,4.6 13.3,5.5 12.6,7.6 Z" id="Shape" stroke="#323333" stroke-width="0.1" fill="#333333" fill-rule="nonzero"></path>
+                <ellipse id="Oval" stroke="#323333" stroke-width="0.1" fill="#333333" fill-rule="nonzero" cx="14.6" cy="9" rx="1.1" ry="1.6"></ellipse>
+            </g>
+            <g id="Shape" fill-rule="nonzero">
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                <path stroke="#4A4A4A" stroke-width="0.2" d="M53.9,0.1 L53.9,19.9 L49.1,19.9 L49.1,0.1 L53.9,0.1 Z"></path>
+            </g>
+            <g id="Shape" fill-rule="nonzero">
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                <path stroke="#4A4A4A" stroke-width="0.2" d="M43.1,4.1 L47.9,4.1 L47.9,19.9 L43.1,19.9 L43.1,4.1 Z"></path>
+            </g>
+            <polygon id="Shape" fill="#E60012" fill-rule="nonzero" points="42 8 37 8 37 20 42 20"></polygon>
+            <polygon id="Shape" fill="#E60012" fill-rule="nonzero" points="36 12 36 20 31 20 31 12 36 12"></polygon>
+            <rect id="Rectangle-path" fill="#E60012" fill-rule="nonzero" x="25" y="16" width="5" height="4"></rect>
+        </g>
+    </g>
+</svg>
