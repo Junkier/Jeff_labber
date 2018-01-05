@@ -1,0 +1,13 @@
+{
+  "name": "gcf-analy-topic-fptree",
+  "version": "0.0.1",
+  "description": "This is eyeSocial analyzer in Google Cloud Function.",
+  "author": "Jeff Sheng",
+  "main":"index.js",
+  "license": "MIT",
+  "dependencies": {
+    "python-shell":"^0.4.0",
+    "moment":"*",
+    "object-sizeof":"^1.1.1"
+  }
+}

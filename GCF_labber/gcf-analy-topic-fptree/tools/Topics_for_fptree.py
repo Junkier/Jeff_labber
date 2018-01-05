@@ -127,7 +127,7 @@ try :
 
     ###########################################################################################################
     elif query_mode == "or": # Or  mode.
-
+        main_word = user_key_word[0][0]
         for word_set in user_key_word:
             count = 1
 
@@ -138,13 +138,14 @@ try :
             the_1st_word_list = map(lambda ele : ele[0] ,  the_1st_words)
 
             for the_1st_ele in the_1st_words:
+                max_count = [0,5,4,3,2,2][len(user_key_word)-1] if len(user_key_word) <=6 else 1
 
-                if count >= [0,5,4,3,2,2,1,1,1,1,1][len(user_key_word)-1] :
+                if count >= max_count:
                     continue
 
                 if the_1st_ele[0] not in judge_list :
                     result.append({
-                        "word" : word_set ,    # 感覺會出事QQ
+                        "word"   : main_word,    # 感覺會出事QQ
                         "weight" : the_1st_ele[1],
                         "Level1" : the_1st_ele[0],
                         "Level2" : ""
@@ -160,7 +161,7 @@ try :
                         # the_2nd_ele is a tuple.
                         if the_2nd_ele[0] not in the_1st_word_list  and the_2nd_ele[0] not in judge_list :
                             result.append({
-                                "word" : word_set ,
+                                "word"   : main_word,
                                 "weight" : the_2nd_ele[1] ,
                                 "Level1" : the_1st_ele[0] ,
                                 "Level2" : the_2nd_ele[0]
@@ -174,4 +175,4 @@ except TypeError as e:
 if len(result) > 0:
 	print json.dumps({"FPtree" : result})
 else :
-	print json.dumps({"FPtreeErr" : "Nothing~~~"})
+	print json.dumps({"FPtreeErr" : []})
